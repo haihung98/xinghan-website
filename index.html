@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Công Ty TNHH Công Nghệ Xinghan</title>
 
   <style>
+
     *{
       margin:0;
       padding:0;
@@ -19,29 +22,39 @@
       line-height:1.6;
     }
 
+    html{
+      scroll-behavior:smooth;
+    }
+
+    /* HEADER */
+
     header{
-      background:#0a1f44;
-      padding:15px 40px;
+      background:#0b1d3a;
       position:fixed;
       width:100%;
       top:0;
       z-index:1000;
+      box-shadow:0 2px 10px rgba(0,0,0,0.2);
     }
 
-    nav{
+    .navbar{
+      width:90%;
+      max-width:1300px;
+      margin:auto;
       display:flex;
       justify-content:space-between;
       align-items:center;
+      padding:18px 0;
     }
 
     .logo{
-      color:#fff;
-      font-size:30px;
+      color:white;
+      font-size:28px;
       font-weight:bold;
     }
 
     .logo span{
-      color:#ff3c00;
+      color:#00bfff;
     }
 
     nav ul{
@@ -61,88 +74,116 @@
       color:#00bfff;
     }
 
+    /* HERO */
+
     .hero{
       height:100vh;
+
       background:
-      linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-      url("images/banner.jpg") center/cover no-repeat;
+      linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+      url("images/banner.jpg");
+
+      background-size:cover;
+      background-position:center;
+
       display:flex;
-      align-items:center;
       justify-content:center;
+      align-items:center;
       text-align:center;
       color:white;
+
       padding:20px;
     }
 
-    .hero-content h1{
-      font-size:60px;
-      margin-bottom:20px;
+    .hero-content{
+      max-width:900px;
     }
 
-    .hero-content p{
-      font-size:22px;
-      margin-bottom:30px;
+    .hero h1{
+      font-size:65px;
+      margin-bottom:20px;
+      line-height:1.2;
+    }
+
+    .hero p{
+      font-size:24px;
+      margin-bottom:35px;
+      color:#ddd;
     }
 
     .btn{
       display:inline-block;
-      padding:14px 35px;
-      background:#007bff;
+      padding:15px 35px;
+      background:#00bfff;
       color:white;
       text-decoration:none;
-      border-radius:40px;
+      border-radius:50px;
       font-weight:bold;
       transition:0.3s;
     }
 
     .btn:hover{
-      background:#0056b3;
+      background:#008ecc;
+      transform:translateY(-3px);
     }
 
+    /* SECTION */
+
     section{
-      padding:90px 60px;
+      padding:100px 8%;
     }
 
     .section-title{
       text-align:center;
-      margin-bottom:50px;
+      margin-bottom:60px;
     }
 
     .section-title h2{
-      font-size:42px;
-      color:#0a1f44;
+      font-size:45px;
+      color:#0b1d3a;
       margin-bottom:10px;
     }
+
+    .section-title p{
+      color:#666;
+      font-size:18px;
+    }
+
+    /* ABOUT */
 
     .about{
       display:grid;
       grid-template-columns:1fr 1fr;
-      gap:40px;
+      gap:50px;
       align-items:center;
     }
 
     .about img{
       width:100%;
-      border-radius:15px;
-      box-shadow:0 5px 20px rgba(0,0,0,0.2);
+      border-radius:20px;
+      box-shadow:0 5px 25px rgba(0,0,0,0.2);
     }
 
-    .about-text{
-      font-size:18px;
+    .about-text p{
+      margin-bottom:20px;
       text-align:justify;
+      color:#555;
+      font-size:17px;
     }
+
+    /* PRODUCTS */
 
     .products{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
       gap:30px;
     }
 
     .card{
       background:white;
-      border-radius:15px;
+      border-radius:18px;
       overflow:hidden;
-      box-shadow:0 5px 15px rgba(0,0,0,0.15);
+      box-shadow:0 5px 20px rgba(0,0,0,0.1);
       transition:0.3s;
     }
 
@@ -157,20 +198,26 @@
     }
 
     .card-content{
-      padding:20px;
+      padding:22px;
     }
 
     .card-content h3{
-      color:#0a1f44;
-      margin-bottom:10px;
       font-size:22px;
+      margin-bottom:10px;
+      color:#0b1d3a;
     }
 
-    .contact{
-      background:#0a1f44;
+    .card-content p{
+      color:#666;
+    }
+
+    /* CONTACT */
+
+    .contact-section{
+      background:#0b1d3a;
       color:white;
-      border-radius:20px;
-      padding:60px;
+      border-radius:25px;
+      padding:70px 50px;
     }
 
     .contact-grid{
@@ -183,25 +230,60 @@
     .contact-box{
       background:rgba(255,255,255,0.08);
       padding:30px;
-      border-radius:15px;
+      border-radius:18px;
+      transition:0.3s;
+    }
+
+    .contact-box:hover{
+      transform:translateY(-5px);
+      background:rgba(255,255,255,0.12);
     }
 
     .contact-box h3{
       margin-bottom:15px;
       color:#00bfff;
+      font-size:24px;
     }
 
-    footer{
-      background:#06142d;
+    .contact-box p{
+      margin-bottom:15px;
+    }
+
+    .contact-btn{
+      display:inline-block;
+      padding:12px 24px;
+      background:#00bfff;
       color:white;
+      text-decoration:none;
+      border-radius:40px;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    .contact-btn:hover{
+      background:#008ecc;
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:#061428;
+      color:#ccc;
       text-align:center;
       padding:25px;
+      margin-top:60px;
     }
+
+    /* MOBILE */
 
     @media(max-width:900px){
 
-      .hero-content h1{
-        font-size:40px;
+      .hero h1{
+        font-size:42px;
+      }
+
+      .hero p{
+        font-size:18px;
       }
 
       .about{
@@ -209,18 +291,9 @@
       }
 
       nav{
-        flex-direction:column;
-        gap:15px;
+        display:none;
       }
 
-      nav ul{
-        flex-wrap:wrap;
-        justify-content:center;
-      }
-
-      section{
-        padding:80px 25px;
-      }
     }
 
   </style>
@@ -228,223 +301,281 @@
 
 <body>
 
-<header>
-  <nav>
-    <div class="logo">
-      XINGHAN <span>TECHNOLOGY</span>
+  <!-- HEADER -->
+
+  <header>
+
+    <div class="navbar">
+
+      <div class="logo">
+        XINGHAN <span>TECHNOLOGY</span>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#home">Trang Chủ</a></li>
+          <li><a href="#about">Về Chúng Tôi</a></li>
+          <li><a href="#products">Sản Phẩm</a></li>
+          <li><a href="#contact">Liên Hệ</a></li>
+        </ul>
+      </nav>
+
     </div>
 
-    <ul>
-      <li><a href="#home">Trang Chủ</a></li>
-      <li><a href="#about">Về Chúng Tôi</a></li>
-      <li><a href="#products">Sản Phẩm</a></li>
-      <li><a href="#contact">Liên Hệ</a></li>
-    </ul>
-  </nav>
-</header>
+  </header>
 
-<!-- Banner -->
-<section class="hero" id="home">
-  <div class="hero-content">
-    <h1>CÔNG TY TNHH CÔNG NGHỆ XINGHAN</h1>
-    <p>
-      Giải pháp tự động hóa toàn diện cho ngành sản xuất công nghiệp
-    </p>
+  <!-- HERO -->
 
-    <a href="#products" class="btn">
-      Xem Sản Phẩm
-    </a>
-  </div>
-</section>
+  <section class="hero" id="home">
 
-<!-- About -->
-<section id="about">
+    <div class="hero-content">
 
-  <div class="section-title">
-    <h2>VỀ CHÚNG TÔI</h2>
-  </div>
-
-  <div class="about">
-
-    <img src="images/about.jpg" alt="Xinghan Company">
-
-    <div class="about-text">
+      <h1>
+        CÔNG TY TNHH CÔNG NGHỆ XINGHAN
+      </h1>
 
       <p>
-        Công ty TNHH Công nghệ Xinghan Việt Nam có trụ sở tại
-        Khu công nghiệp Đồng Văn I, phường Đồng Văn,
-        tỉnh Ninh Bình, Việt Nam, được thành lập vào năm 2022,
-        là công ty con 100% vốn của Công ty TNHH Thiết bị Robot Xinsheng,
-        thành phố Quảng Châu.
+        Chuyên cung cấp giải pháp tự động hóa,
+        robot công nghiệp và dây chuyền sản xuất hiện đại
       </p>
 
-      <br>
-
-      <p>
-        Công ty chuyên sản xuất các sản phẩm dây chuyền lắp ráp xích tốc độ kép,
-        dây chuyền vận chuyển, dây chuyền đóng gói, dây chuyền băng tải,
-        bàn làm việc và các sản phẩm liên quan.
-      </p>
-
-      <br>
-
-      <p>
-        Kể từ khi thành lập, công ty đã phục vụ cho nhiều doanh nghiệp nổi tiếng
-        tại thị trường Đông Nam Á, mang lại sản phẩm chất lượng tốt nhất
-        cho khách hàng.
-      </p>
-
-      <br>
-
-      <p>
-        Trong tương lai, Xinghan Technology sẽ tiếp tục phát huy tinh thần
-        chuyên nghiệp và đổi mới, cung cấp các giải pháp chuyên nghiệp
-        và toàn diện cho khách hàng.
-      </p>
+      <a href="#products" class="btn">
+        Xem Sản Phẩm
+      </a>
 
     </div>
-  </div>
-</section>
 
-<!-- Products -->
-<section id="products">
+  </section>
 
-  <div class="section-title">
-    <h2>SẢN PHẨM CHÍNH</h2>
-  </div>
+  <!-- ABOUT -->
 
-  <div class="products">
-
-    <div class="card">
-      <img src="images/product1.jpg">
-      <div class="card-content">
-        <h3>Dây chuyền lắp ráp xích tốc độ kép</h3>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="images/product2.jpg">
-      <div class="card-content">
-        <h3>Dây chuyền vận chuyển</h3>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="images/product3.jpg">
-      <div class="card-content">
-        <h3>Dây chuyền đóng gói</h3>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="images/product4.jpg">
-      <div class="card-content">
-        <h3>Dây chuyền băng tải</h3>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="images/product5.jpg">
-      <div class="card-content">
-        <h3>Dây chuyền băng tải con lăn</h3>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="images/product6.jpg">
-      <div class="card-content">
-        <h3>Bàn làm việc</h3>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="images/product7.jpg">
-      <div class="card-content">
-        <h3>Robot tra keo, tra thiếc</h3>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="images/product8.jpg">
-      <div class="card-content">
-        <h3>Dây chuyền tự động cấp lấy liệu cho máy dập</h3>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="images/product9.jpg">
-      <div class="card-content">
-        <h3>Dây chuyền tự động cấp lấy liệu cho máy CNC</h3>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="images/product10.jpg">
-      <div class="card-content">
-        <h3>Hệ thống robot gắp ba trục dạng giàn</h3>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- Contact -->
-<section id="contact">
-
-  <div class="contact">
+  <section id="about">
 
     <div class="section-title">
-      <h2 style="color:white;">LIÊN HỆ</h2>
+      <h2>VỀ CHÚNG TÔI</h2>
+      <p>Nhà cung cấp giải pháp tự động hóa chuyên nghiệp</p>
     </div>
 
-    <div class="contact-grid">
+    <div class="about">
 
-      <div class="contact-box">
-        <h3>Email</h3>
-        <p>hungtrinh.200398@gmail.com</p>
+      <!-- ẢNH THỨ 2 -->
+      <img src="images/about.jpg" alt="About Xinghan">
+
+      <div class="about-text">
+
+        <p>
+          Công ty TNHH Công nghệ Xinghan Việt Nam có trụ sở tại
+          Khu công nghiệp Đồng Văn I, phường Đồng Văn,
+          tỉnh Ninh Bình, Việt Nam, được thành lập vào năm 2022,
+          là công ty con 100% vốn của Công ty TNHH Thiết bị Robot Xinsheng,
+          thành phố Quảng Châu.
+        </p>
+
+        <p>
+          Công ty chuyên sản xuất các sản phẩm dây chuyền lắp ráp xích tốc độ kép,
+          dây chuyền vận chuyển, dây chuyền đóng gói,
+          dây chuyền băng tải, bàn làm việc và các sản phẩm liên quan.
+        </p>
+
+        <p>
+          Kể từ khi thành lập, công ty đã phục vụ cho nhiều doanh nghiệp nổi tiếng
+          tại thị trường Đông Nam Á, mang lại sản phẩm chất lượng tốt nhất cho khách hàng.
+        </p>
+
+        <p>
+          Chúng tôi mong muốn hợp tác chân thành với các khách hàng trong và ngoài nước,
+          cùng nhau phát triển bền vững.
+        </p>
+
+        <p>
+          Trong tương lai, Xinghan Technology sẽ tiếp tục phát huy tinh thần chuyên nghiệp
+          và đổi mới, cung cấp các giải pháp chuyên nghiệp và toàn diện cho khách hàng.
+        </p>
+
       </div>
 
-      <div class="contact-box">
-        <h3>Phone</h3>
-  <p>+84 0397185421</p>
+    </div>
 
-  <br>
+  </section>
 
-  <!-- Nút Zalo -->
-  <a href="https://zalo.me/0912498210"
-     target="_blank"
-     class="btn">
-     Liên hệ Zalo
-  </a>
+  <!-- PRODUCTS -->
 
-  <br><br>
+  <section id="products" style="background:#eef3f8;">
 
-  <!-- Nút WeChat -->
-  <a href="https://weixin.qq.com/"
-     target="_blank"
-     class="btn">
-     WeChat: wxid_3jnskqg0lke712
-  </a>
-</div>
+    <div class="section-title">
+      <h2>SẢN PHẨM CHÍNH</h2>
+      <p>Các hệ thống tự động hóa và thiết bị công nghiệp</p>
+    </div>
 
-      <div class="contact-box">
-        <h3>Địa Chỉ</h3>
-        <p>
-          Khu công nghiệp Đồng Văn I,
-          phường Đồng Văn,
-          tỉnh Ninh Bình, Việt Nam
+    <div class="products">
+
+      <!-- 1 -->
+      <div class="card">
+        <img src="images/product1.jpg">
+        <div class="card-content">
+          <h3>Dây chuyền lắp ráp xích tốc độ kép</h3>
+          <p>Hệ thống lắp ráp tự động tốc độ cao.</p>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="card">
+        <img src="images/product2.jpg">
+        <div class="card-content">
+          <h3>Dây chuyền vận chuyển</h3>
+          <p>Giải pháp vận chuyển tự động cho nhà máy.</p>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="card">
+        <img src="images/product3.jpg">
+        <div class="card-content">
+          <h3>Dây chuyền đóng gói</h3>
+          <p>Thiết bị đóng gói tự động công nghiệp.</p>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="card">
+        <img src="images/product4.jpg">
+        <div class="card-content">
+          <h3>Dây chuyền băng tải</h3>
+          <p>Hệ thống băng tải hiện đại.</p>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="card">
+        <img src="images/product5.jpg">
+        <div class="card-content">
+          <h3>Dây chuyền băng tải con lăn</h3>
+          <p>Con lăn vận chuyển hàng hóa hiệu quả.</p>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="card">
+        <img src="images/product6.jpg">
+        <div class="card-content">
+          <h3>Bàn làm việc</h3>
+          <p>Bàn thao tác công nghiệp cho line sản xuất.</p>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="card">
+        <img src="images/product7.jpg">
+        <div class="card-content">
+          <h3>Robot tra keo, tra thiếc</h3>
+          <p>Robot tự động độ chính xác cao.</p>
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="card">
+        <img src="images/product8.jpg">
+        <div class="card-content">
+          <h3>Tự động cấp lấy liệu cho máy dập</h3>
+          <p>Giải pháp tự động hóa cho máy dập.</p>
+        </div>
+      </div>
+
+      <!-- 9 -->
+      <div class="card">
+        <img src="images/product9.jpg">
+        <div class="card-content">
+          <h3>Tự động cấp lấy liệu cho máy CNC</h3>
+          <p>Robot cấp liệu CNC tối ưu năng suất.</p>
+        </div>
+      </div>
+
+      <!-- 10 -->
+      <div class="card">
+        <img src="images/product10.jpg">
+        <div class="card-content">
+          <h3>Hệ thống robot gắp ba trục dạng giàn</h3>
+          <p>Robot gắp tự động tốc độ cao.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+
+  <section id="contact">
+
+    <div class="contact-section">
+
+      <div class="section-title">
+        <h2 style="color:white;">LIÊN HỆ</h2>
+        <p style="color:#ccc;">
+          Hãy liên hệ với chúng tôi để được tư vấn giải pháp phù hợp
         </p>
       </div>
 
+      <div class="contact-grid">
+
+        <div class="contact-box">
+          <h3>Email</h3>
+          <p>hungtrinh.200398@gmail.com</p>
+        </div>
+
+        <div class="contact-box">
+          <h3>Phone</h3>
+          <p>+84 0397185421</p>
+        </div>
+
+        <div class="contact-box">
+          <h3>Địa Chỉ</h3>
+          <p>
+            Khu công nghiệp Đồng Văn I,
+            phường Đồng Văn,
+            tỉnh Ninh Bình, Việt Nam
+          </p>
+        </div>
+
+        <div class="contact-box">
+          <h3>Zalo</h3>
+          <p>0912498210</p>
+
+          <a
+            href="https://zalo.me/0912498210"
+            target="_blank"
+            class="contact-btn">
+
+            Liên hệ Zalo
+
+          </a>
+        </div>
+
+        <div class="contact-box">
+          <h3>WeChat</h3>
+          <p>wxid_3jnskqg0lke712</p>
+
+          <a
+            href="https://weixin.qq.com/"
+            target="_blank"
+            class="contact-btn">
+
+            Liên hệ WeChat
+
+          </a>
+        </div>
+
+      </div>
+
     </div>
 
-  </div>
+  </section>
 
-</section>
+  <!-- FOOTER -->
 
-<footer>
-  © 2025 Công Ty TNHH Công Nghệ Xinghan
-</footer>
+  <footer>
+    © 2025 Công Ty TNHH Công Nghệ Xinghan
+  </footer>
 
 </body>
 </html>
