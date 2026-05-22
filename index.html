@@ -53,16 +53,280 @@ header{
     display:flex;
     justify-content:center;
     align-items:center;
-   0912498201
+    text-align:center;
+    color:white;
+    position:relative;
+}
+
+header::before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+}
+
+.header-content{
+    position:relative;
+    z-index:2;
+}
+
+header h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+header p{
+    font-size:24px;
+}
+
+/* SECTION */
+section{
+    padding:80px 10%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:50px;
+    color:#0b3d91;
+}
+
+/* ABOUT */
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+}
+
+.about img{
+    width:100%;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+.about-text{
+    font-size:18px;
+    text-align:justify;
+}
+
+/* PRODUCTS */
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.product-card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    transition:0.3s;
+}
+
+.product-card:hover{
+    transform:translateY(-10px);
+}
+
+.product-card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.product-card h3{
+    padding:15px;
+    color:#0b3d91;
+}
+
+/* CONTACT */
+.contact{
+    background:#0b3d91;
+    color:white;
+    text-align:center;
+}
+
+.contact-box{
+    margin-top:20px;
+    font-size:20px;
+}
+
+.contact a{
+    color:#ffd700;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.qr{
+    width:220px;
+    margin-top:20px;
+    border-radius:15px;
+}
+
+/* FOOTER */
+footer{
+    background:#001c4d;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+</style>
+
+</head>
+<body>
+
+<!-- MENU -->
+<nav>
+<ul>
+<li><a href="#home">Trang Chủ</a></li>
+<li><a href="#about">Về Chúng Tôi</a></li>
+<li><a href="#products">Sản Phẩm</a></li>
+<li><a href="#contact">Liên Hệ</a></li>
+</ul>
+</nav>
+
+<!-- HEADER -->
+<header id="home">
+<div class="header-content">
+<h1>CÔNG TY TNHH CÔNG NGHỆ XINGHAN</h1>
+<p>Giải pháp tự động hóa chuyên nghiệp</p>
+</div>
+</header>
+
+<!-- ABOUT -->
+<section id="about">
+<h2 class="section-title">Về Chúng Tôi</h2>
+
+<div class="about">
+
+<img src="images/about.png">
+
+<div class="about-text">
+<p>
+Công ty TNHH Công nghệ Xinghan Việt Nam có trụ sở tại Khu công nghiệp Đồng Văn I, phường Đồng Văn, tỉnh Ninh Bình, Việt Nam, được thành lập vào năm 2022, là công ty con 100% vốn của Công ty TNHH Thiết bị Robot Xinsheng, thành phố Quảng Châu.
+</p>
+
+<br>
+
+<p>
+Công ty chuyên sản xuất các sản phẩm dây chuyền lắp ráp xích tốc độ kép, dây chuyền vận chuyển, dây chuyền đóng gói, dây chuyền băng tải, bàn làm việc và các sản phẩm liên quan.
+</p>
+
+<br>
+
+<p>
+Kể từ khi thành lập, công ty đã phục vụ cho nhiều doanh nghiệp nổi tiếng tại thị trường Đông Nam Á, mang lại sản phẩm chất lượng tốt nhất cho khách hàng.
+</p>
+
+<br>
+
+<p>
+Xinghan Technology sẽ tiếp tục phát huy tinh thần chuyên nghiệp và đổi mới, cung cấp các giải pháp chuyên nghiệp và toàn diện cho khách hàng.
+</p>
+
+</div>
+</div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+<h2 class="section-title">Sản Phẩm</h2>
+
+<div class="products">
+
+<div class="product-card">
+<img src="images/product1.png">
+<h3>Dây chuyền lắp ráp xích tốc độ kép</h3>
+</div>
+
+<div class="product-card">
+<img src="images/product2.png">
+<h3>Dây chuyền vận chuyển</h3>
+</div>
+
+<div class="product-card">
+<img src="images/product3.png">
+<h3>Dây chuyền đóng gói</h3>
+</div>
+
+<div class="product-card">
+<img src="images/product4.png">
+<h3>Dây chuyền băng tải</h3>
+</div>
+
+<div class="product-card">
+<img src="images/product5.png">
+<h3>Dây chuyền băng tải con lăn</h3>
+</div>
+
+<div class="product-card">
+<img src="images/product6.png">
+<h3>Bàn làm việc</h3>
+</div>
+
+<div class="product-card">
+<img src="images/product7.png">
+<h3>Robot tra keo, tra thiếc</h3>
+</div>
+
+<div class="product-card">
+<img src="images/product8.png">
+<h3>Dây chuyền tự động cấp lấy liệu cho máy dập</h3>
+</div>
+
+<div class="product-card">
+<img src="images/product9.png">
+<h3>Dây chuyền tự động cấp lấy liệu cho máy CNC</h3>
+</div>
+
+<div class="product-card">
+<img src="images/product10.png">
+<h3>Hệ thống robot gắp ba trục dạng giàn</h3>
+</div>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+<h2 class="section-title" style="color:white;">Liên Hệ</h2>
+
+<div class="contact-box">
+
+<p>Email: hungtrinh.200398@gmail.com</p>
+
+<br>
+
+<p>Phone: +84 0397185421</p>
+
+<br>
+
+<p>
+Địa chỉ: Khu công nghiệp Đồng Văn I,
+phường Đồng Văn,
+tỉnh Ninh Bình, Việt Nam
+</p>
+
+<br>
+
+<p>
+Zalo:
+<a href="https://zalo.me/0912498201" target="_blank">
+0912498201
 </a>
 </p>
 
 <br>
 
 <p>
-<img src="images/wechat.jpg" width="200">
-<p>WeChat: wxid_3jnskqg0lke712</p>
+WeChat ID: wxid_3jnskqg0lke712
 </p>
+
+<br>
+
+<img src="images/wechat.jpg" class="qr">
 
 </div>
 </section>
