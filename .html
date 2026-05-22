@@ -1,0 +1,154 @@
+export default function AutomationWebsite() {
+  return (
+    <div className="min-h-screen bg-white text-gray-800">
+      {/* Hero Section */}
+      <section className="bg-gray-100 py-20 px-6">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <h1 className="text-5xl font-bold leading-tight mb-6">
+              Industrial Automation Solutions For Electronics Factories
+            </h1>
+            <p className="text-lg text-gray-600 mb-8">
+              Chuyên cung cấp giải pháp tự động hóa, robot công nghiệp, jig fixture,
+              conveyor và máy tự động cho nhà máy điện tử.
+            </p>
+            <div className="flex gap-4">
+              <button className="bg-black text-white px-6 py-3 rounded-2xl shadow-lg hover:opacity-90">
+                Liên hệ ngay
+              </button>
+              <button className="border border-black px-6 py-3 rounded-2xl hover:bg-black hover:text-white transition">
+                Xem sản phẩm
+              </button>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-3xl shadow-2xl p-10">
+            <div className="space-y-4">
+              <div className="p-4 rounded-2xl bg-gray-100">
+                Robot Pick & Place
+              </div>
+              <div className="p-4 rounded-2xl bg-gray-100">
+                SMT Automation
+              </div>
+              <div className="p-4 rounded-2xl bg-gray-100">
+                Conveyor System
+              </div>
+              <div className="p-4 rounded-2xl bg-gray-100">
+                Vision Inspection
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About */}
+      <section className="py-20 px-6">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-6">Về Chúng Tôi</h2>
+          <p className="text-gray-600 text-lg leading-8 max-w-4xl mx-auto">
+            Chúng tôi chuyên thiết kế và chế tạo thiết bị tự động hóa cho nhà máy
+            điện tử, SMT, assembly và sản xuất công nghiệp. Đội ngũ kỹ thuật có kinh
+            nghiệm trong robot, PLC, servo, machine vision và hệ thống sản xuất tự động.
+          </p>
+        </div>
+      </section>
+
+      {/* Services */}
+      <section className="bg-gray-50 py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-14">
+            <h2 className="text-4xl font-bold">Sản Phẩm & Dịch Vụ</h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                title: 'Robot Automation',
+                desc: 'Robot pick & place, loading unloading, palletizing.'
+              },
+              {
+                title: 'Jig Fixture',
+                desc: 'Thiết kế jig test, jig assembly, fixture SMT.'
+              },
+              {
+                title: 'Conveyor System',
+                desc: 'Băng tải sản xuất cho nhà máy điện tử.'
+              },
+              {
+                title: 'Machine Vision',
+                desc: 'Camera kiểm tra lỗi và nhận diện sản phẩm.'
+              },
+              {
+                title: 'SMT Automation',
+                desc: 'Giải pháp tự động hóa line SMT.'
+              },
+              {
+                title: 'Custom Machine',
+                desc: 'Thiết kế máy tự động theo yêu cầu khách hàng.'
+              }
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="bg-white p-8 rounded-3xl shadow-lg hover:-translate-y-1 transition"
+              >
+                <h3 className="text-2xl font-semibold mb-4">{item.title}</h3>
+                <p className="text-gray-600 leading-7">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Projects */}
+      <section className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-14">
+            <h2 className="text-4xl font-bold">Dự Án Tiêu Biểu</h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              'Automatic Assembly Line',
+              'PCB Conveyor System',
+              'Robot Loading Machine'
+            ].map((project, index) => (
+              <div
+                key={index}
+                className="h-64 rounded-3xl bg-gray-200 flex items-center justify-center text-2xl font-semibold shadow-lg"
+              >
+                {project}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section className="bg-black text-white py-20 px-6">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-6">Liên Hệ</h2>
+          <p className="text-lg text-gray-300 mb-10">
+            Hãy liên hệ với chúng tôi để nhận giải pháp tự động hóa phù hợp cho nhà máy của bạn.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-6 text-left">
+            <div className="bg-white/10 p-6 rounded-2xl">
+              <h3 className="font-semibold text-xl mb-2">Email</h3>
+              <p>sales@yourcompany.com</p>
+            </div>
+
+            <div className="bg-white/10 p-6 rounded-2xl">
+              <h3 className="font-semibold text-xl mb-2">Phone</h3>
+              <p>+84 000 000 000</p>
+            </div>
+
+            <div className="bg-white/10 p-6 rounded-2xl">
+              <h3 className="font-semibold text-xl mb-2">Address</h3>
+              <p>Ha Noi, Viet Nam</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  )
+}
