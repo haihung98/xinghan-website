@@ -7,268 +7,69 @@
 
 <style>
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
 }
 
 body{
-background:#f5f5f5;
-color:#333;
+    background:#f5f5f5;
+    color:#333;
+    line-height:1.6;
 }
 
+/* MENU */
+nav{
+    background:#0b3d91;
+    padding:15px 40px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav ul{
+    display:flex;
+    justify-content:center;
+    list-style:none;
+    gap:40px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:18px;
+}
+
+nav ul li a:hover{
+    color:#ffd700;
+}
+
+/* HEADER */
 header{
-height:100vh;
-background:url('images/banner.jpg') center/cover no-repeat;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-color:white;
-}
-
-header .overlay{
-background:rgba(0,0,0,0.6);
-padding:40px;
-border-radius:15px;
-}
-
-header h1{
-font-size:55px;
-margin-bottom:20px;
-}
-
-header p{
-font-size:22px;
-}
-
-section{
-padding:60px 10%;
-}
-
-.title{
-text-align:center;
-font-size:38px;
-margin-bottom:40px;
-color:#004080;
-}
-
-.about{
-display:flex;
-gap:40px;
-align-items:center;
-flex-wrap:wrap;
-}
-
-.about img{
-width:500px;
-max-width:100%;
-border-radius:15px;
-}
-
-.about-text{
-flex:1;
-font-size:18px;
-line-height:1.8;
-}
-
-.products{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:30px;
-}
-
-.card{
-background:white;
-border-radius:15px;
-overflow:hidden;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-5px);
-}
-
-.card img{
-width:100%;
-height:220px;
-object-fit:cover;
-}
-
-.card h3{
-padding:15px;
-font-size:22px;
-color:#004080;
-}
-
-.contact{
-background:#004080;
-color:white;
-text-align:center;
-border-radius:20px;
-padding:50px;
-}
-
-.contact p{
-font-size:20px;
-margin:15px 0;
-}
-
-.contact a{
-color:yellow;
-text-decoration:none;
-font-weight:bold;
-}
-
-footer{
-background:#00264d;
-color:white;
-text-align:center;
-padding:20px;
-margin-top:40px;
-}
-</style>
-</head>
-
-<body>
-
-<header>
-<div class="overlay">
-<h1>CÔNG TY TNHH CÔNG NGHỆ XINGHAN</h1>
-<p>Giải pháp tự động hóa công nghiệp chuyên nghiệp</p>
-</div>
-</header>
-
-<section>
-<h2 class="title">VỀ CHÚNG TÔI</h2>
-
-<div class="about">
-<img src="images/about.jpg">
-
-<div class="about-text">
-<p>
-Công ty TNHH Công nghệ Xinghan Việt Nam có trụ sở tại Khu công nghiệp Đồng Văn I, phường Đồng Văn, tỉnh Ninh Bình, Việt Nam.
-</p>
-
-<br>
-
-<p>
-Được thành lập vào năm 2022, là công ty con 100% vốn của Công ty TNHH Thiết bị Robot Xinsheng, thành phố Quảng Châu.
-</p>
-
-<br>
-
-<p>
-Công ty chuyên sản xuất dây chuyền lắp ráp xích tốc độ kép, dây chuyền vận chuyển, dây chuyền đóng gói, dây chuyền băng tải, robot tự động hóa và các thiết bị công nghiệp hiện đại.
-</p>
-
-<br>
-
-<p>
-Xinghan Technology cam kết cung cấp các giải pháp chuyên nghiệp và toàn diện cho khách hàng trong và ngoài nước.
-</p>
-
-</div>
-</div>
-</section>
-
-<section>
-<h2 class="title">SẢN PHẨM</h2>
-
-<div class="products">
-
-<div class="card">
-<img src="images/product1.jpg">
-<h3>Dây chuyền lắp ráp xích tốc độ kép</h3>
-</div>
-
-<div class="card">
-<img src="images/product2.jpg">
-<h3>Dây chuyền vận chuyển</h3>
-</div>
-
-<div class="card">
-<img src="images/product3.jpg">
-<h3>Dây chuyền đóng gói</h3>
-</div>
-
-<div class="card">
-<img src="images/product4.jpg">
-<h3>Dây chuyền băng tải</h3>
-</div>
-
-<div class="card">
-<img src="images/product5.jpg">
-<h3>Dây chuyền băng tải con lăn</h3>
-</div>
-
-<div class="card">
-<img src="images/product6.jpg">
-<h3>Bàn làm việc</h3>
-</div>
-
-<div class="card">
-<img src="images/product7.jpg">
-<h3>Robot tra keo, tra thiếc</h3>
-</div>
-
-<div class="card">
-<img src="images/product8.jpg">
-<h3>Dây chuyền tự động cấp lấy liệu cho máy dập</h3>
-</div>
-
-<div class="card">
-<img src="images/product9.jpg">
-<h3>Dây chuyền tự động cấp lấy liệu cho máy CNC</h3>
-</div>
-
-<div class="card">
-<img src="images/product10.jpg">
-<h3>Hệ thống robot gắp ba trục dạng giàn</h3>
-</div>
-
-</div>
-</section>
-
-<section>
-<div class="contact">
-
-<h2 class="title" style="color:white;">LIÊN HỆ</h2>
-
-<p>Email: hungtrinh.200398@gmail.com</p>
-
-<p>Phone: +84 0397185421</p>
-
-<p>Zalo: 0912498210</p>
-
-<p>WeChat: wxid_3jnskqg0lke712</p>
-
-<p>
-Địa chỉ:
-Khu công nghiệp Đồng Văn I, phường Đồng Văn, tỉnh Ninh Bình, Việt Nam
-</p>
-
-<br>
-
-<p>
-<a href="https://zalo.me/0912498201" target="_blank">
-Liên hệ Zalo
+    height:100vh;
+    background:url('images/banner.jpg') center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+   0912498201
 </a>
 </p>
+
+<br>
 
 <p>
 <img src="images/wechat.jpg" width="200">
 <p>WeChat: wxid_3jnskqg0lke712</p>
-</a>
 </p>
 
 </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
-© 2026 Công Ty TNHH Công Nghệ Xinghan
+<p>© 2025 Công Ty TNHH Công Nghệ Xinghan</p>
 </footer>
 
 </body>
