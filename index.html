@@ -16,8 +16,6 @@ XINGHAN TECHNOLOGY WEBSITE
 
 <style>
 
-/* ===== GLOBAL ===== */
-
 *{
     margin:0;
     padding:0;
@@ -40,18 +38,18 @@ body{
 nav{
     width:100%;
     background:rgba(0,0,0,0.85);
-    backdrop-filter:blur(5px);
     position:fixed;
     top:0;
     z-index:999;
+    backdrop-filter:blur(6px);
 }
 
 nav ul{
     display:flex;
     justify-content:center;
+    gap:40px;
     list-style:none;
     padding:18px;
-    gap:40px;
     flex-wrap:wrap;
 }
 
@@ -64,7 +62,7 @@ nav ul li a{
 }
 
 nav ul li a:hover{
-    color:#00bfff;
+    color:#00c3ff;
 }
 
 /* ===== HEADER ===== */
@@ -74,7 +72,7 @@ header{
     height:100vh;
 
     background:
-    linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.7)),
+    linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.75)),
     url('images/banner.png');
 
     background-size:cover;
@@ -94,14 +92,14 @@ header{
 }
 
 header h1{
-    font-size:72px;
+    font-size:75px;
     margin-bottom:20px;
-    text-shadow:4px 4px 12px black;
+    text-shadow:4px 4px 10px black;
 }
 
 header h2{
     font-size:40px;
-    margin-bottom:30px;
+    margin-bottom:25px;
     color:#00c3ff;
 }
 
@@ -118,8 +116,8 @@ section{
 .section-title{
     text-align:center;
     font-size:48px;
-    color:#0b3d91;
     margin-bottom:60px;
+    color:#0a3d91;
 }
 
 .section-title::after{
@@ -155,13 +153,13 @@ section{
 }
 
 .about-text h3{
-    color:#0b3d91;
-    font-size:32px;
-    margin-bottom:25px;
+    color:#0a3d91;
+    font-size:30px;
+    margin-bottom:20px;
 }
 
 .about-text p{
-    margin-bottom:20px;
+    margin-bottom:18px;
     text-align:justify;
     font-size:17px;
 }
@@ -197,23 +195,27 @@ section{
 }
 
 .product-info h3{
-    color:#0b3d91;
+    color:#0a3d91;
     font-size:28px;
     margin-bottom:10px;
 }
 
 .product-info h4{
-    color:#777;
-    font-size:22px;
+    color:#666;
     margin-bottom:20px;
+    font-size:22px;
 }
 
 .product-info p{
-    margin-bottom:18px;
+    margin-bottom:15px;
     text-align:justify;
 }
 
 /* ===== CONTACT ===== */
+
+.contact-section{
+    padding-top:160px;
+}
 
 .contact{
     background:
@@ -223,11 +225,15 @@ section{
     background-size:cover;
     background-position:center;
 
-    border-radius:30px;
-    padding:70px;
+    border-radius:35px;
+
+    padding:80px;
 
     color:white;
+
     text-align:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
 }
 
 .contact h2{
@@ -248,8 +254,8 @@ section{
 
 .qr{
     width:220px;
-    border-radius:20px;
     margin-top:25px;
+    border-radius:20px;
     border:5px solid white;
 }
 
@@ -261,6 +267,7 @@ footer{
     text-align:center;
     padding:25px;
     font-size:18px;
+    margin-top:80px;
 }
 
 /* ===== MOBILE ===== */
@@ -287,6 +294,10 @@ nav ul{
     gap:15px;
 }
 
+.contact{
+    padding:40px 20px;
+}
+
 }
 
 </style>
@@ -302,27 +313,19 @@ nav ul{
 <ul>
 
 <li>
-<a href="#home">
-Trang Chủ 首页
-</a>
+<a href="#home">Trang Chủ 首页</a>
 </li>
 
 <li>
-<a href="#about">
-Giới Thiệu 公司简介
-</a>
+<a href="#about">Giới Thiệu 公司简介</a>
 </li>
 
 <li>
-<a href="#products">
-Sản Phẩm 产品中心
-</a>
+<a href="#products">Sản Phẩm 产品中心</a>
 </li>
 
 <li>
-<a href="#contact">
-Liên Hệ 联系我们
-</a>
+<a href="#contact">Liên Hệ 联系我们</a>
 </li>
 
 </ul>
@@ -366,63 +369,47 @@ GIỚI THIỆU CÔNG TY 公司简介
 
 <div class="about-text">
 
-<h3>
-兴汉科技有限公司
-</h3>
+<h3>兴汉科技有限公司</h3>
 
 <p>
 越南兴汉科技有限公司位于越南宁平省同文区同文I工业圆，
-成立于2022年，是广州市鑫笙机器人设备有限公司的全资子公司，
-集产品研发、工程设计装配及加工为一体的总装线产品生产专业厂商，
-专注自动化生产及倍速链组装线、物流线、打包线、皮带线、
-工作台等产品。
+成立于2022年，是广州市鑫笙机器人设备有限公司的全资子公司。
 </p>
 
 <p>
-公司自成立以来，面向东南亚地区市场服务了多家知名企业，
-为用户提供最优质的产品。愿与国内外客户真诚合作，
-携手并进，共同发展，欢迎各界朋友莅临我司考察指导。
+公司专注自动化生产及倍速链组装线、物流线、
+打包线、皮带线、工作台等产品，
+集产品研发、工程设计、装配及加工为一体。
 </p>
 
 <p>
-在未来的发展中，
-兴汉科技将继续发扬专注和创新精神，
-为客户提供更加专业、系统的解决方案。
+公司自成立以来，
+已为东南亚地区多家知名企业提供高品质自动化设备与解决方案。
 </p>
 
 <hr style="margin:25px 0;">
 
-<h3>
-CÔNG TY TNHH CÔNG NGHỆ XINGHAN
-</h3>
+<h3>CÔNG TY TNHH CÔNG NGHỆ XINGHAN</h3>
 
 <p>
-Công ty TNHH Công nghệ Xinghan Việt Nam có trụ sở tại
-Khu công nghiệp Đồng Văn I, phường Đồng Văn,
-tỉnh Ninh Bình, Việt Nam,
-được thành lập vào năm 2022,
-là công ty con 100% vốn của Công ty TNHH Thiết bị Robot Xinsheng,
-thành phố Quảng Châu.
+Công ty TNHH Công nghệ Xinghan Việt Nam
+được thành lập năm 2022,
+là công ty con 100% vốn của
+Công ty TNHH Thiết bị Robot Xinsheng Quảng Châu.
 </p>
 
 <p>
-Công ty chuyên sản xuất các sản phẩm dây chuyền lắp ráp xích tốc độ kép,
+Công ty chuyên sản xuất các hệ thống tự động hóa,
 dây chuyền vận chuyển,
 dây chuyền đóng gói,
-dây chuyền băng tải,
-bàn làm việc và các sản phẩm liên quan.
+băng tải công nghiệp,
+robot tự động và các giải pháp cơ khí chính xác.
 </p>
 
 <p>
-Kể từ khi thành lập,
-công ty đã phục vụ cho nhiều doanh nghiệp nổi tiếng tại thị trường Đông Nam Á,
-mang lại sản phẩm chất lượng tốt nhất cho khách hàng.
-</p>
-
-<p>
-Trong tương lai,
-Xinghan Technology sẽ tiếp tục phát huy tinh thần chuyên nghiệp và đổi mới,
-cung cấp các giải pháp chuyên nghiệp và toàn diện cho khách hàng.
+Xinghan luôn hướng đến chất lượng,
+đổi mới công nghệ
+và hợp tác bền vững cùng khách hàng trong và ngoài nước.
 </p>
 
 </div>
@@ -449,27 +436,20 @@ SẢN PHẨM 产品中心
 
 <div class="product-info">
 
-<h3>
-Dây chuyền lắp ráp xích tốc độ kép
-</h3>
+<h3>Dây chuyền lắp ráp xích tốc độ kép</h3>
 
-<h4>
-倍速链组装线
-</h4>
+<h4>倍速链组装线</h4>
 
 <p>
 上下回流循环组装线，
-适用于电子、电器、自动化等行业，
-具有输送稳定、效率高、
-可实现多工位同步装配等特点。
+适用于电子、电器、自动化行业，
+具有运行稳定、效率高等特点。
 </p>
 
 <p>
 Dây chuyền lắp ráp tuần hoàn hồi lưu hai tầng
-được ứng dụng rộng rãi trong ngành điện tử,
-thiết bị tự động hóa và cơ khí chính xác.
-Hệ thống vận hành ổn định,
-nâng cao hiệu suất và tối ưu hóa sản xuất.
+giúp tăng tốc độ sản xuất,
+vận hành ổn định và tối ưu hóa dây chuyền tự động hóa.
 </p>
 
 </div>
@@ -484,24 +464,19 @@ nâng cao hiệu suất và tối ưu hóa sản xuất.
 
 <div class="product-info">
 
-<h3>
-Dây chuyền vận chuyển
-</h3>
+<h3>Dây chuyền vận chuyển</h3>
 
-<h4>
-物流线
-</h4>
+<h4>物流线</h4>
 
 <p>
 自动物流输送线主要由输送带和滚筒组成，
-通过连续运动实现自动输送，
-适用于工厂自动化物流系统。
+实现自动运输与分 luồng sản phẩm.
 </p>
 
 <p>
-Dây chuyền vận chuyển tự động sử dụng băng tải và con lăn
-để vận chuyển hàng hóa liên tục,
-giúp tăng hiệu quả sản xuất và tiết kiệm nhân công.
+Dây chuyền vận chuyển tự động
+giúp nâng cao hiệu quả logistics nhà máy,
+giảm nhân công và tăng tính ổn định.
 </p>
 
 </div>
@@ -516,26 +491,19 @@ giúp tăng hiệu quả sản xuất và tiết kiệm nhân công.
 
 <div class="product-info">
 
-<h3>
-Dây chuyền đóng gói
-</h3>
+<h3>Dây chuyền đóng gói</h3>
 
-<h4>
-打包线
-</h4>
+<h4>打包线</h4>
 
 <p>
-打包线采用PLC自动控制系统，
-具备自动扫码、
-自动打带、
-自动缠膜等功能。
+打包线采用PLC自动控制，
+支持自动扫码、自动打带及自动缠膜。
 </p>
 
 <p>
-Dây chuyền đóng gói tự động tích hợp PLC,
-quét mã tự động,
-đóng đai và quấn màng,
-giúp tối ưu hóa quá trình đóng gói sản phẩm.
+Hệ thống đóng gói tự động
+giúp tối ưu hóa quy trình sản xuất
+và kết nối MES thông minh.
 </p>
 
 </div>
@@ -550,25 +518,19 @@ giúp tối ưu hóa quá trình đóng gói sản phẩm.
 
 <div class="product-info">
 
-<h3>
-Dây chuyền băng tải
-</h3>
+<h3>Dây chuyền băng tải</h3>
 
-<h4>
-皮带输送线
-</h4>
+<h4>皮带输送线</h4>
 
 <p>
-皮带输送线是现代自动化工厂中不可缺少的物流设备，
-具有运行平稳、
+皮带输送线运行稳定、
 噪音低、
-输送效率高等特点。
+适合连续化生产。
 </p>
 
 <p>
-Dây chuyền băng tải là thiết bị vận chuyển quan trọng
-trong các nhà máy tự động hóa hiện đại,
-giúp sản xuất liên tục và ổn định.
+Dây chuyền băng tải công nghiệp
+được sử dụng rộng rãi trong các nhà máy điện tử và tự động hóa.
 </p>
 
 </div>
@@ -583,23 +545,19 @@ giúp sản xuất liên tục và ổn định.
 
 <div class="product-info">
 
-<h3>
-Dây chuyền băng tải con lăn
-</h3>
+<h3>Dây chuyền băng tải con lăn</h3>
 
-<h4>
-滚筒输送线
-</h4>
+<h4>滚筒输送线</h4>
 
 <p>
-滚筒输送线适用于底部平面的产品运输，
-具有速度快、
+滚筒输送线适用于底部平面的产品，
+具有输送速度快、
 承载能力强等优点。
 </p>
 
 <p>
-Dây chuyền con lăn phù hợp với các sản phẩm đáy phẳng,
-giúp vận chuyển nhanh chóng và ổn định trong nhà máy.
+Băng tải con lăn giúp vận chuyển sản phẩm nhanh,
+ổn định và dễ tích hợp vào dây chuyền tự động hóa.
 </p>
 
 </div>
@@ -614,24 +572,19 @@ giúp vận chuyển nhanh chóng và ổn định trong nhà máy.
 
 <div class="product-info">
 
-<h3>
-Bàn làm việc
-</h3>
+<h3>Bàn làm việc</h3>
 
-<h4>
-工作台
-</h4>
+<h4>工作台</h4>
 
 <p>
-工作台采用优质铝型材和冷轧钢板制作，
-结构牢固，
-适用于多种工业生产环境。
+工作台采用优质铝型材制作，
+结构稳定、美观耐用。
 </p>
 
 <p>
-Bàn làm việc được sản xuất từ nhôm định hình và thép cán nguội,
-thiết kế chắc chắn,
-thẩm mỹ và tiết kiệm không gian.
+Bàn làm việc công nghiệp
+được thiết kế chắc chắn,
+tiết kiệm không gian và phù hợp nhiều môi trường sản xuất.
 </p>
 
 </div>
@@ -646,22 +599,17 @@ thẩm mỹ và tiết kiệm không gian.
 
 <div class="product-info">
 
-<h3>
-Robot tra keo, tra thiếc
-</h3>
+<h3>Robot tra keo, tra thiếc</h3>
 
-<h4>
-机器人点胶、点锡
-</h4>
+<h4>机器人点胶、点锡</h4>
 
 <p>
-自动点胶机器人通过视觉识别与气压控制系统，
-实现高精度点胶与点锡作业。
+自动点胶机器人通过视觉系统与气压控制实现高精度作业。
 </p>
 
 <p>
-Robot tra keo tự động giúp nâng cao độ chính xác,
-ổn định chất lượng và tăng hiệu quả sản xuất điện tử.
+Robot tra keo tự động giúp tăng độ chính xác,
+ổn định chất lượng sản phẩm và giảm lỗi sản xuất.
 </p>
 
 </div>
@@ -676,22 +624,18 @@ Robot tra keo tự động giúp nâng cao độ chính xác,
 
 <div class="product-info">
 
-<h3>
-Dây chuyền cấp liệu máy dập
-</h3>
+<h3>Dây chuyền cấp liệu máy dập</h3>
 
-<h4>
-冲压上下料生产线
-</h4>
+<h4>冲压上下料生产线</h4>
 
 <p>
 采用日本川崎机器人与三菱PLC，
-实现自动上下料与冲压生产。
+实现自动上下料与冲压加工。
 </p>
 
 <p>
-Thiết bị sử dụng robot Kawasaki và PLC Mitsubishi,
-giúp tự động hóa quá trình cấp – lấy liệu cho máy dập.
+Hệ thống cấp – lấy liệu máy dập
+giúp tăng tốc độ sản xuất và giảm nhân công vận hành.
 </p>
 
 </div>
@@ -706,23 +650,19 @@ giúp tự động hóa quá trình cấp – lấy liệu cho máy dập.
 
 <div class="product-info">
 
-<h3>
-Dây chuyền cấp liệu CNC
-</h3>
+<h3>Dây chuyền cấp liệu CNC</h3>
 
-<h4>
-CNC上下料生产线
-</h4>
+<h4>CNC上下料生产线</h4>
 
 <p>
-采用视觉识别系统与机械手臂自动抓取工件，
-减少人工并提高生产效率。
+采用视觉识别系统自动抓取工件，
+提高加工效率与稳定性。
 </p>
 
 <p>
-Hệ thống sử dụng công nghệ thị giác và robot tự động
-để cấp – lấy liệu cho máy CNC,
-giúp tăng năng suất và giảm nhân công.
+Robot tự động cấp liệu CNC
+giúp tối ưu hóa sản xuất
+và nâng cao hiệu suất gia công.
 </p>
 
 </div>
@@ -737,18 +677,44 @@ giúp tăng năng suất và giảm nhân công.
 
 <div class="product-info">
 
-<h3>
-Robot gắp ba trục dạDOANH| 联系我们
-</h2>
+<h3>Robot gắp ba trục dạng giàn</h3>
+
+<h4>桁架三轴机械手搬运</h4>
 
 <p>
-Email:
-hungtrinh.200398@gmail.com
+采用三轴桁架机械手搬运大型钢结构，
+实现高精度自动化搬运。
 </p>
 
 <p>
-Phone:
-+84 0397185421
+Robot giàn ba trục phù hợp vận chuyển sản phẩm lớn,
+đảm bảo an toàn và vận hành ổn định.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===== CONTACT ===== -->
+
+<section id="contact" class="contact-section">
+
+<div class="contact">
+
+<h2>
+LIÊN HỆ | 联系我们
+</h2>
+
+<p>
+Email: hungtrinh.200398@gmail.com
+</p>
+
+<p>
+Phone: +84 0397185421
 </p>
 
 <p>
